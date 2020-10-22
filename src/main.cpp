@@ -3,7 +3,6 @@
 
 
 int main() {
-	Edownloader_version();
 	main_menu();
 	install_video();
 }

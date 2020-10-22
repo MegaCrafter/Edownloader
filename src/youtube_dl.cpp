@@ -1,15 +1,13 @@
 #include <iostream>
 
-void Edownloader_version() {
-	std::string _version_ = "1.0.0";
-	std::cout << _version_ << std::endl;
-}
+const std::string Edownloader_version = "1.0.0";
 
 void main_menu() {
-	std::cout << "------ Welcome to Edownloader ------\n"
+	std::cout << "------ Welcome to Edownloader v" << Edownloader_version << " ------\n"
             << "1.) Install Video (Default: Mp4 and Best Quality)\n"
             << "2.) Install Video mp3\n"
-            << "3.) Install Playlist videos\n" << std::endl;	
+            << "3.) Install Playlist videos\n"
+			<< "4.) Exit\n";	
 }
 
 void install_video() {
@@ -42,5 +40,19 @@ void install_video() {
 
   else if(option == 3) {
     std::string playlist_url;
+	std::string youtube_dl = "youtube-dl --playlist-start 1 --playlist-end ";
+	std::cout << "Type an playlist link";
+	std::cin >> playlist_url;
+	std::string end_num;
+	std::cout << "What's last video number? - -> ";
+	std::cin >> end_num;
+	std::string install = youtube_dl + end_num + " " +  playlist_url;
+	const char* command = install.c_str();
+	system(command);
+	std::cout << "Installation finished!";
   }
+
+  else if(option == 4) {
+	system("exit");	
+  }	
 }
