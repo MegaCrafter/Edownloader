@@ -42,5 +42,15 @@ void install_video() {
 
   else if(option == 3) {
     std::string playlist_url;
+	std::string youtube_dl = "youtube-dl --playlist-start 1 --playlist-end ";
+	std::cout << "Type an playlist link";
+	std::cin >> playlist_url;
+	std::string end_num;
+	std::cout << "What's last video number? - -> ";
+	std::cin >> end_num;
+	std::string install = youtube_dl + end_num + " " +  playlist_url;
+	const char* command = install.c_str();
+	system(command);
+	std::cout << "Installation finished!";
   }
 }
