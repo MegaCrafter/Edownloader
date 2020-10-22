@@ -1,15 +1,13 @@
 #include <iostream>
 
-void Edownloader_version() {
-	std::string _version_ = "1.0.0";
-	std::cout << _version_ << std::endl;
-}
+const std::string Edownloader_version = "1.0.0";
 
 void main_menu() {
-	std::cout << "------ Welcome to Edownloader ------\n"
+	std::cout << "------ Welcome to Edownloader v" << Edownloader_version << " ------\n"
             << "1.) Install Video (Default: Mp4 and Best Quality)\n"
             << "2.) Install Video mp3\n"
-            << "3.) Install Playlist videos\n" << std::endl;	
+            << "3.) Install Playlist videos\n"
+			<< "4.) Exit\n";	
 }
 
 void install_video() {
@@ -53,4 +51,8 @@ void install_video() {
 	system(command);
 	std::cout << "Installation finished!";
   }
+
+  else if(option == 4) {
+	system("exit");	
+  }	
 }
