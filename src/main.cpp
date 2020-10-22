@@ -3,6 +3,7 @@
 
 
 int main() {
+        install_depends();
 	main_menu();
 	install_video();
 }
