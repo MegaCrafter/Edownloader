@@ -5,8 +5,7 @@
 void install_depends() {
 	#ifdef __unix__
     
-    system("youtube-dl");
-    system("echo $? >> out.txt");
+    system("youtube-dl 2> /dev/null; echo $? > out.txt");
     
     std::string line;
     std::ifstream out_file ("out.txt");
