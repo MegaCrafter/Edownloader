@@ -4,18 +4,20 @@ const std::string Edownloader_version = "1.0.0";
 
 void main_menu() {
 	std::cout << "------ Welcome to Edownloader v" << Edownloader_version << " ------\n"
-            << "1.) Install Video (Default: Mp4 and Best Quality)\n"
-            << "2.) Install Video mp3\n"
-            << "3.) Install Playlist videos\n"
-	        << "4.) Exit\n";	
+              << "1.) Install Video (Default: Mp4 and Best Quality)\n"
+              << "2.) Install Video mp3\n"
+              << "3.) Install Playlist videos\n"
+	          << "4.) Exit\n";	
 }
 
 
 void install_video() {
+    
+    main_menu();
 	int option =  0;
 
 	std::cout << "Please choose option - - > ";
-  std::cin >> option;
+    std::cin >> option;
 
   if(option == 1) {
     std::string video_url;

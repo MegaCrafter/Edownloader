@@ -9,6 +9,7 @@ edownloader: $(OBJ_FILES)
 
 clean:
 	rm -f $(OUT_NAME)
+	rm out.txt
 	rm -rf out
 	mkdir out
 
