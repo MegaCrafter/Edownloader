@@ -7,8 +7,9 @@ void main_menu() {
             << "1.) Install Video (Default: Mp4 and Best Quality)\n"
             << "2.) Install Video mp3\n"
             << "3.) Install Playlist videos\n"
-			<< "4.) Exit\n";	
+	        << "4.) Exit\n";	
 }
+
 
 void install_video() {
 	int option =  0;
