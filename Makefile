@@ -9,8 +9,8 @@ edownloader: $(OBJ_FILES)
 
 clean:
 	rm -f $(OUT_NAME)
-	rm out.txt
 	rm -rf out
+	rm -f out.txt
 	mkdir out
 
 out/main.o: src/main.cpp
